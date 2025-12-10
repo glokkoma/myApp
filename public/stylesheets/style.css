@@ -1,8 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --color-negro-intenso: #000000;
+    --color-fondo-tarjeta: #141414;
+    --color-gris-oscuro: #2F2F2F;
+    --color-rojo-principal: #E50914;
+    --color-blanco: #FFFFFF;
+    --color-gris-claro: #A9A9A9;
+
+    --font-family: 'Inter', sans-serif;
+    --font-size-titulo-xl: 3rem; 
+    --font-size-titulo-l: 2rem; 
+    --font-size-normal: 1.125rem; 
+    --font-size-detalle: 0.9375rem; 
+    --spacing-xs: 0.5rem;
+    --spacing-s: 1rem;
+    --spacing-m: 1.5rem;
+    --spacing-l: 3rem;
+    --spacing-xl: 4rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: var(--font-family);
+    background-color: var(--color-negro-intenso);
+    color: var(--color-blanco);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
-  color: #00B7FF;
+    color: var(--color-gris-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-rojo-principal);
+}
+
+h1, h2 {
+    font-weight: bold;
+    color: var(--color-blanco);
+}
+
+h1 {
+    font-size: var(--font-size-titulo-xl);
+}
+
+h2 {
+    font-size: var(--font-size-titulo-l);
+}
+
+p, label, input, textarea, button {
+    font-size: var(--font-size-normal);
+    color: var(--color-blanco);
+}
+
+.header {
+    background-color: var(--color-negro-intenso);
+    padding: var(--spacing-m) 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-gris-oscuro);
+}
+
+.logoContainer a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-rojo-principal);
+}
+
+.navButtons a, .mainButton {
+    background-color: var(--color-rojo-principal);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-left: var(--spacing-s);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navButtons button {
+    background-color: var(--color-rojo-principal);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-left: var(--spacing-s);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: var(--font-size-normal);
+}
+
+.navButtons a:hover, .mainButton:hover, .navButtons button:hover {
+    background-color: #C40812;
+}
+
+.navButtons .secondaryLink {
+    background-color: transparent;
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+}
+
+.navButtons .secondaryLink:hover {
+    color: var(--color-rojo-principal);
+}
+
+.mainContent {
+    flex: 1;
+    padding: var(--spacing-l) 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: var(--color-negro-intenso);
+    padding: var(--spacing-l) 5%;
+    border-top: 1px solid var(--color-gris-oscuro);
+    color: var(--color-gris-claro);
+    font-size: var(--font-size-detalle);
+}
+
+.footerNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-top: var(--spacing-m);
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    min-width: 9.375rem;
+}
+
+.footerColumn h3 {
+    color: var(--color-blanco);
+    font-size: 1rem;
+    margin-bottom: 0.625rem;
+}
+
+.footerColumn a {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-detalle);
+    color: var(--color-gris-claro);
+}
+
+.movieGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1.25rem;
+    margin-top: var(--spacing-m);
+}
+
+.movieCard {
+    background-color: var(--color-fondo-tarjeta);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movieCard:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.movieCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.plansSection {
+    padding: var(--spacing-l) 0;
+    text-align: center;
+}
+
+.planCards {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: var(--spacing-m);
+    flex-wrap: wrap;
+}
+
+.planCard {
+    background-color: var(--color-gris-oscuro);
+    width: 18.75rem;
+    padding: var(--spacing-m);
+    border-radius: 0.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.planCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3125rem;
+    color: var(--color-blanco);
+}
+
+.planCard .price {
+    font-size: var(--font-size-titulo-l);
+    font-weight: bold;
+    color: var(--color-blanco);
+    margin-bottom: 1.25rem;
+}
+
+.planCard ul {
+    list-style: none;
+    margin-bottom: 1.25rem;
+    padding-left: 0;
+}
+
+.planCard ul li {
+    margin-bottom: 0.625rem;
+    color: var(--color-gris-claro);
+    display: flex;
+    align-items: center;
+}
+
+.planCard .selectButton {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.formContainer {
+    background-color: var(--color-gris-oscuro);
+    max-width: 28.125rem;
+    margin: var(--spacing-l) auto;
+    padding: var(--spacing-l);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.formContainer h2 {
+    margin-bottom: var(--spacing-m);
+}
+
+.formGroup {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-detalle);
+    color: var(--color-gris-claro);
+}
+
+.formGroup input[type="text"], 
+.formGroup input[type="email"], 
+.formGroup input[type="password"],
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-gris-oscuro);
+    border-radius: 0.25rem;
+    color: var(--color-blanco);
+    font-size: var(--font-size-normal);
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 9.375rem;
+}
+
+.formButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-rojo-principal);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 0.25rem;
+    font-size: var(--font-size-normal);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formButton:hover {
+    background-color: #C40812;
+}
+
+.formFooterLinks {
+    margin-top: 1.25rem;
+    font-size: var(--font-size-detalle);
+}
+
+.formFooterLinks a {
+    color: var(--color-rojo-principal);
+    font-weight: bold;
 }

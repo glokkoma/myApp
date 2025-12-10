@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - CineCampanillas</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logoContainer">
+            <a href="/">CineCampanillas</a>
+        </div>
+        <nav class="navButtons">
+            <a href="/contact" class="secondaryLink">Contacto</a>
+            <a href="/login" class="mainButton">Iniciar Sesión</a>
+            <a href="#plans" class="mainButton">Suscríbete ya</a>
+        </nav>
+    </header>
+    <main class="mainContent">
+        <div class="formContainer">
+            <h2>Iniciar Sesión</h2>
+            <form action="/login" method="POST">
+                <div class="formGroup">
+                    <label for="username">Correo Electrónico o Teléfono</label>
+                    <input type="email" id="username" name="username" required>
+                </div>
+                <div class="formGroup">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="formButton">Iniciar Sesión</button>
+            </form>
+            <div class="formFooterLinks">
+                <p>¿Primera vez en CineCampanillas? <a href="#">Suscríbete ahora.</a></p>
+                <p style="margin-top: 0.625rem;"><a href="#">¿Olvidaste tu contraseña?</a></p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" style="text-align: center;">
+        <p><a href="#">Términos de uso</a> | <a href="#">Preferencias de cookies</a> | <a href="#">Opciones de anuncios</a> | <a href="#">Privacidad</a> | <a href="#">Información corporativa</a></p>
+        <a href="/" style="display: block; margin-top: 1.25rem;">Volver Atrás</a>
+    </footer>
+</body>
+</html>

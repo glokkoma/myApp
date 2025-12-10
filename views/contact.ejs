@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - CineCampanillas</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logoContainer">
+            <a href="/">CineCampanillas</a>
+        </div>
+        <nav class="navButtons">
+            <a href="/contact" class="secondaryLink">Contacto</a>
+            <a href="/login" class="mainButton">Iniciar Sesión</a>
+            <a href="#plans" class="mainButton">Suscríbete ya</a>
+        </nav>
+    </header>
+    <main class="mainContent">
+        <div class="formContainer" style="max-width: 37.5rem;">
+            <h2>Centro de Ayuda - Contacta con Nosotros</h2>
+            <p style="color: var(--color-gris-claro); margin-bottom: var(--spacing-m);">
+                ¿No has encontrado una solución en nuestras <a href="#" style="color: var(--color-rojo-principal);">Preguntas Frecuentes</a>? Rellena el formulario y te responderemos lo antes posible.
+            </p>
+
+            <form action="/contact" method="POST">
+                <div class="formGroup">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="formGroup">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="formGroup">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="formButton">Enviar Formulario de Contacto</button>
+            </form>
+            
+            <div class="formFooterLinks" style="margin-top: var(--spacing-m);">
+                <p>También puedes contactarnos por:</p>
+                <p>&#9993; Correo: <a href="mailto:cinceampanillas@gmail.com">cinceampanillas@gmail.com</a></p>
+                <p style="margin-top: 0.625rem;">&#9742; Teléfono gratuito: 123 456 789</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Si tiene alguna duda llame gratis al 123 456 789</p>
+            <div class="footerNav">
+                <div class="footerColumn">
+                    <h3>Cuenta</h3>
+                    <a href="/login">Iniciar Sesión</a>
+                    <a href="#">Crear Cuenta</a>
+                    <a href="#plans">Planes y Precios</a>
+                </div>
+                <div class="footerColumn">
+                    <h3>Soporte</h3>
+                    <a href="/contact">Contactar</a>
+                    <a href="/contact">Preguntas Frecuentes</a>
+                    <a href="/contact">Centro de Ayuda</a>
+                </div>
+                <div class="footerColumn">
+                    <h3>Legal</h3>
+                    <a href="#">Términos de Uso</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Información Corporativa</a>
+                </div>
+                <div class="footerColumn">
+                    <h3>Redes Sociales</h3>
+                    <a href="#">X (Twitter)</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
